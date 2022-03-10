@@ -1,0 +1,49 @@
+* {
+    color: #333;
+    font-size: 16px;
+    font-family: Helvetica;
+    line-height: 1.5;
+    margin-left: 5px;
+  }
+
+  h1 {
+      font-size: 35px;
+      margin-top: 25px;
+      margin-left: 10px;
+  }
+
+  h2{
+      font-size: 20px;
+  }
+
+  a{
+      color: blue;
+  }
+
+  button{
+    background-color: rgb(38, 0, 206);
+    cursor:pointer;
+    text-align: center;
+    font-size: 16px;
+    width: 9rem;
+    height: 3.5rem;
+    line-height: 3rem;
+    text-decoration: none;
+    box-shadow: .05rem .05rem .25rem #222;
+    border-radius: 4px;
+    margin-top: 5px;
+    color:white;
+  }
+
+  button:hover{
+    top: .05rem;
+    left: .05rem;
+    box-shadow: none;
+    color: white;
+    background-color: rgb(24, 0, 109);
+  }
+
+.displayTime{
+    margin-top: 50px;
+    font-size: 20px;
+}

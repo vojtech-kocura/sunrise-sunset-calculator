@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sluneční kalkulačka</title>
+
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <h1>Kalkulačka východu a západu slunce</h1>
+    <p>Data jsou sbírána z veřejného aplikačního rozhraní poskytovaného norským meteorologickým úřadem dostupného na <a href=https://www.yr.no/en>této</a> adrese.</p>
+    <p>Kalkulačka zobrazuje časy východu a západu slunce ve Vámi zvolené datum na základě Vaší polohy.</p>
+
+    <div>
+      <h2>1. Krok: Vyberte datum</h2>
+      <input type="date" id="setDate">
+    </div>
+
+    <div>
+      <h2>2. Krok: Po kliknutí na tlačítko povolte přístup k poloze</h2>
+      <button  id="getLocationBtn" value="Zjistit časy!" onclick="getOffset(),getDate(),getLocation()">Zjistit časy!</button>
+    </div>
+
+   <div id="displayTime" class="displayTime">
+     <div id="displaySunrise"></div>
+     <div id="displaySunset"></div>
+   </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html> 
