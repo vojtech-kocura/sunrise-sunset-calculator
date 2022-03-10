@@ -32,8 +32,6 @@ const getOffset = () => {
 
 
 const calculateTime = (lat,long,date,offset) => {
- /* x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude; */
   handleError();
   if(errorHandeler === "error") {console.clear(); location.reload();}
   const url = `https://api.met.no/weatherapi/sunrise/2.0/.json?lat=${lat}&lon=${long}&date=${date}&offset=${offset}`;
