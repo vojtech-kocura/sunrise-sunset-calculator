@@ -32,20 +32,21 @@ const getOffset = () => {
 
 
 const calculateTime = (lat,long,date,offset) => {
+ /* x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude; */
   handleError();
   if(errorHandeler === "error") {console.clear(); location.reload();}
-  const url = `https://api.met.no/weatherapi/sunrise/2.0/.json?lat=${lat}&lon=${long}&date=${date}&offset=${offset}`;
+  const url = `https://api.met.no/weatherapi/sunrise/3.0/sun?lat=${lat}&lon=${long}&date=${date}&offset=${offset}`;
   fetch(url)
   .then(res => res.json())
   .then(data => {
-    const sunriseTime = new Date(data.location.time[0].sunrise.time); 
-    const sunsetTime = new Date(data.location.time[0].sunset.time);
-
+    console.log({data})
+    const sunriseTime = new Date(data.properties.sunrise.time); 
+    const sunsetTime = new Date(data.properties.sunset.time);
     let today = new Date()
     let todayHours = today.getHours();
-    let todayMinutes = today.getMinutes();
     today = today.toISOString().substring(0,10);
-
+  
     let keywordSunrise;
     let keywordSunset;
 
@@ -72,5 +73,3 @@ const handleError = () =>{
 const listOfCities = () => { //TODO
   displayTime.innerHTML = 'TODO';
 }
-
-
